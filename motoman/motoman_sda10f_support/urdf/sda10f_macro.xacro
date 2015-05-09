@@ -140,16 +140,16 @@
                 <parent link="arm_left_link_tool0" />
                 <child link="hand_left_palm" />
             </joint> -->
-
+<!-- 
         <xacro:s-model_articulated prefix="hand_right_">
             <origin xyz="0 0 0" rpy="0 0 0" />
         </xacro:s-model_articulated>      
-   
-        <joint name="hand_right_joint" type="fixed">
+    -->
+<!--         <joint name="hand_right_joint" type="fixed">
            <origin rpy="1.57079 0 2.87979" xyz="0 0 0.0797125"/>
                 <parent link="cylinder_hand_right" />
                 <child link="hand_right_palm" />
-            </joint>
+            </joint> -->
      
   <!--      <joint name="hand_right_joint" type="fixed">
             <origin rpy="-1.57079 0 0" xyz="0 0 -0.0684"/>
