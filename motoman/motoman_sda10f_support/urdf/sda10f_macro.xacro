@@ -31,7 +31,7 @@
 	<link name="cylinder_hand_right">
 		<visual>
 			<geometry>
-				<cylinder length=".0743" radius=".06" />
+				<cylinder length=".05" radius=".06" />
 			</geometry>
 			<material name="ylw">
           			<color rgba=".8 .8 0 1"/>
@@ -134,6 +134,41 @@
                 <parent link="cylinder_hand_left" />
                 <child link="hand_left_palm" />
             </joint>
+
+
+	<link name="traybody_hand_right">
+		<visual>
+			<geometry>
+				<box size="0.19 .005 .50" />
+			</geometry>
+			<material name="pwkl">
+          			<color rgba=".8 .6 1 1"/>
+         		</material>
+		</visual>
+	</link>
+	
+	<link name="trayhandle_hand_right">
+		<visual>
+			<geometry>
+				<box size="0.155 .165 .015" />
+			</geometry>
+			<material name="pwkl">
+          			<color rgba=".8 .6 1 1"/>
+         		</material>
+		</visual>
+	</link>
+	
+	<joint name="hand_right_joint" type="fixed">
+			<origin rpy="0 0 3.14159" xyz="0.0 0.05 0.0325"/>
+			<parent link="cylinder_hand_right" />
+			<child link="trayhandle_hand_right" /> 
+    </joint>
+    
+	<joint name="tray_joint" type="fixed">
+			<origin rpy="0 0 0" xyz="0.0 -0.08 0.25"/>
+			<parent link="trayhandle_hand_right" />
+			<child link="traybody_hand_right" /> 
+    </joint>
         
     <!--    <joint name="hand_left_joint" type="fixed">
             <origin rpy="-1.57079 0 3.14159" xyz="0 0 -0.0684"/>
