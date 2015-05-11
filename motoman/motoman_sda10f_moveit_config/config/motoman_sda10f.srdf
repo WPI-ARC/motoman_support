@@ -223,5 +223,8 @@
     <disable_collisions link1="robotiq_force_wires_left" link2="hand_left_palm" reason="Never" />
     <disable_collisions link1="robotiq_hand_wires_left" link2="hand_left_finger_middle_link_0" reason="Never"/>
 
+    <disable_collisions link1="hand_left_finger_1_link_3" link2="hand_left_finger_1_link_3_tip" reason="Adjacent" />
+    <disable_collisions link1="hand_left_finger_2_link_3" link2="hand_left_finger_2_link_3_tip" reason="Adjacent" />
+    <disable_collisions link1="hand_left_finger_middle_link_3" link2="hand_left_finger_middle_link_3_tip" reason="Adjacent" />
 
 </robot>
