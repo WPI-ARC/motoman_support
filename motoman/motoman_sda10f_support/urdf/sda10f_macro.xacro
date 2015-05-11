@@ -31,7 +31,7 @@
 	<link name="cylinder_hand_right">
 		<visual>
 			<geometry>
-				<cylinder length=".0743" radius=".06" />
+				<cylinder length=".04" radius=".06" />
 			</geometry>
 			<material name="ylw">
           			<color rgba=".8 .8 0 1"/>
@@ -54,8 +54,7 @@
             <origin rpy="0 0 0" xyz="0 0 .083"/>
                 <parent link="hand_left_palm" />
                 <child link="camera_left" />
-        </joint>
-
+    </joint>
 
     <link name="robotiq_hand_wires_left">
 		<visual>
@@ -74,7 +73,6 @@
                 <child link="robotiq_hand_wires_left" />
     </joint>
 
-
     <link name="robotiq_force_wires_left">
 		<visual>
 			<geometry>
@@ -92,48 +90,27 @@
                 <child link="robotiq_force_wires_left" />
     </joint>
 
+	<joint name="hand_cylinder_joint_left" type="fixed">
+		<origin rpy="3.14159 0 3.14159" xyz="0 0 0"/>
+			<parent link="arm_left_link_tool0" />
+			<child link="cylinder_hand_left" />
+	</joint>
 
-<!--
-	<link name="ft_sensor_cable_box_left">
-		<visual>
-			<geometry>
-				<box size=".055 .055 .033" />
-			</geometry>
-		</visual>
-	</link>
+	<joint name="hand_cylinder_joint_right" type="fixed">
+		<origin rpy="3.14159 0 3.14159" xyz="0 0 -.03125"/>
+			<parent link="arm_right_link_tool0" />
+			<child link="cylinder_hand_right" />
+	</joint>
 
-	<link name="ft_sensor_cable_box_right">
-		<visual>
-			<geometry>
-				<box size=".055 .055 .033" />
-			</geometry>
-		</visual>
-	</link>
--->
-
-
-        <joint name="hand_cylinder_joint_left" type="fixed">
-            <origin rpy="3.14159 0 3.14159" xyz="0 0 0"/>
-                <parent link="arm_left_link_tool0" />
-                <child link="cylinder_hand_left" />
-        </joint>
-
-        <joint name="hand_cylinder_joint_right" type="fixed">
-            <origin rpy="3.14159 0 3.14159" xyz="0 0 -.03125"/>
-                <parent link="arm_right_link_tool0" />
-                <child link="cylinder_hand_right" />
-        </joint>
-
-
-        <xacro:s-model_articulated prefix="hand_left_">
-            <origin xyz="0 0 0" rpy="0 0 0" />
-        </xacro:s-model_articulated>
-<!--.077475-->
-        <joint name="hand_left_joint" type="fixed">
-           <origin rpy="1.57079 0 -0.26180" xyz="0 0 0.0797125"/>
-                <parent link="cylinder_hand_left" />
-                <child link="hand_left_palm" />
-            </joint>
+	<xacro:s-model_articulated prefix="hand_left_">
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</xacro:s-model_articulated>
+        
+	<joint name="hand_left_joint" type="fixed">
+	   <origin rpy="1.57079 0 -0.26180" xyz="0 0 0.0797125"/>
+			<parent link="cylinder_hand_left" />
+			<child link="hand_left_palm" />
+	</joint>
         
     <!--    <joint name="hand_left_joint" type="fixed">
             <origin rpy="-1.57079 0 3.14159" xyz="0 0 -0.0684"/>
@@ -141,15 +118,61 @@
                 <child link="hand_left_palm" />
             </joint> -->
 
-        <xacro:s-model_articulated prefix="hand_right_">
+<!--        <xacro:s-model_articulated prefix="hand_right_">
             <origin xyz="0 0 0" rpy="0 0 0" />
         </xacro:s-model_articulated>      
-   
-        <joint name="hand_right_joint" type="fixed">
-           <origin rpy="1.57079 0 2.87979" xyz="0 0 0.0797125"/>
+-->
+	<link name="traybody_hand_right">
+		<visual>
+			<geometry>
+				<box size="0.19 .005 .50" />
+			</geometry>
+			<material name="pwkl">
+          			<color rgba=".8 .6 1 1"/>
+         		</material>
+		</visual>
+	</link>
+	
+	<link name="trayhandle_hand_right">
+		<visual>
+			<geometry>
+				<box size="0.155 .165 .015" />
+			</geometry>
+			<material name="pwkl">
+          			<color rgba=".8 .6 1 1"/>
+         		</material>
+		</visual>
+	</link>
+	
+	<joint name="hand_right_joint" type="fixed">
+			<origin rpy="0 0 0" xyz="0.0 -0.05 0.03"/>
+			<parent link="cylinder_hand_right" />
+			<child link="trayhandle_hand_right" /> 
+    </joint>
+    
+	<joint name="tray_joint" type="fixed">
+			<origin rpy="0 0 0" xyz="0.0 -0.08 0.25"/>
+			<parent link="trayhandle_hand_right" />
+			<child link="traybody_hand_right" /> 
+    </joint>
+    
+<!--
+			<origin rpy="0 0.523 0" xyz="0.20 0 0.25"/>
+			
+			<origin rpy="0 0.7853975 0" xyz="0.20 0 0.25"/>
+						
+			<origin rpy="0 1.047 0" xyz="0.30 0 0.03"/> 
+			
+			<origin rpy="0 1.309 0" xyz="0.20 0 0.20"/>
+			
+			<origin rpy="0 1.57 0" xyz="0.25 0 0.095"/>
+			
+			
+			<joint name="hand_right_joint" type="fixed">
+				<origin rpy="1.57079 0 2.87979" xyz="0 0 0.0797125"/>
                 <parent link="cylinder_hand_right" />
-                <child link="hand_right_palm" />
-            </joint>
+                <child link="hand_right_palm" /> 
+            </joint> -->
      
   <!--      <joint name="hand_right_joint" type="fixed">
             <origin rpy="-1.57079 0 0" xyz="0 0 -0.0684"/>
