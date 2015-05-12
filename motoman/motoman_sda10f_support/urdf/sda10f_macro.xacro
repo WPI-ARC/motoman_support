@@ -159,7 +159,7 @@
 	</link>
 	
 	<joint name="hand_right_joint" type="fixed">
-			<origin rpy="0 0 3.14159" xyz="0.0 0.05 0.0325"/>
+			<origin rpy="0 0 2.623674" xyz="0.0 0.05 0.0325"/>
 			<parent link="cylinder_hand_right" />
 			<child link="trayhandle_hand_right" /> 
     </joint>
