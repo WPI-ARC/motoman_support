@@ -197,6 +197,11 @@
 
     <disable_collisions link1="arm_right_link_7_t" link2="trayhandle_hand_right" reason="Adjacent" />
     <disable_collisions link1="trayhandle_hand_right" link2="traybody_hand_right" reason="Adjacent" />
+        
+    <disable_collisions link1="head_wire" link2="torso_link_b1" reason="Adjacent" />    
+    <disable_collisions link1="head_wire" link2="torso_link_b2" reason="Adjacent" />   
+    <disable_collisions link1="head_wire" link2="arm_right_link_1_s" reason="Adjacent" />   
+    <disable_collisions link1="head_wire" link2="arm_left_link_1_s" reason="Adjacent" />
 
     <disable_collisions link1="cylinder_hand_left" link2="arm_left_link_tool0" reason="Never" />
     <disable_collisions link1="cylinder_hand_left" link2="hand_left_palm" reason="Never" />

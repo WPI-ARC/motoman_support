@@ -91,6 +91,8 @@
                 <parent link="cylinder_hand_left" />
                 <child link="robotiq_force_wires_left" />
     </joint>
+    
+
 
 
 <!--
@@ -169,7 +171,23 @@
 			<parent link="trayhandle_hand_right" />
 			<child link="traybody_hand_right" /> 
     </joint>
-        
+    
+    <link name="head_wire">
+		<visual>
+			<geometry>
+				<box size="0.1 0.2 0.07" />
+			</geometry> 
+            <material name="pwkl">
+          		<color rgba=".8 0 1 1"/>
+         	</material>
+		</visual>
+	</link>
+	
+	<joint name="head_wire_joint" type="fixed">
+			<origin rpy="0 0 0" xyz="0.1 0.0 0.45"/>
+			<parent link="torso_link_b1" />
+			<child link="head_wire" /> 
+    </joint>
     <!--    <joint name="hand_left_joint" type="fixed">
             <origin rpy="-1.57079 0 3.14159" xyz="0 0 -0.0684"/>
                 <parent link="arm_left_link_tool0" />
