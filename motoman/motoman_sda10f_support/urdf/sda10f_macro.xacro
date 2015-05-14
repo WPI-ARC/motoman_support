@@ -39,10 +39,10 @@
 		</visual>
 	</link>
 
-    <link name="camera_left">
+  <link name="camera_left">
 		<visual>
 			<geometry>
-				<box size=".11 .025 .035" />
+				<box size=".12 .065 .04" />
 			</geometry>
             <material name="pwkl">
           		<color rgba=".8 .8 1 1"/>
@@ -51,11 +51,10 @@
 	</link>
 
     <joint name="camera_joint_left" type="fixed">
-            <origin rpy="0 0 0" xyz="0 0 .083"/>
-                <parent link="hand_left_palm" />
-                <child link="camera_left" />
-        </joint>
-
+            <origin rpy="0 0 0" xyz="0 0.07 0.05"/>
+                <parent link="arm_left_link_tool0" />
+                <child link="camera_left" />``
+    </joint>
 
     <link name="robotiq_hand_wires_left">
 		<visual>
