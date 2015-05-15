@@ -216,6 +216,9 @@
     <disable_collisions link1="cylinder_hand_left" link2="hand_left_palm" reason="Never" />
     <disable_collisions link1="cylinder_hand_left" link2="arm_left_link_7_t" reason="Never" />
     <disable_collisions link1="cylinder_hand_left" link2="arm_left_link_6_b" reason="Never" />
+    <disable_collisions link1="cylinder_hand_left" link2="hand_left_finger_2_link_0" reason="Never" />
+    <disable_collisions link1="cylinder_hand_left" link2="hand_left_finger_1_link_0" reason="Never" />
+    <disable_collisions link1="cylinder_hand_left" link2="hand_left_finger_middle_link_0" reason="Never" />
 
     <disable_collisions link1="cylinder_hand_right" link2="arm_right_link_tool0" reason="Never" />
     <disable_collisions link1="cylinder_hand_right" link2="arm_right_link_6_b" reason="Never" />
