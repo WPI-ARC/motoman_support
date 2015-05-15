@@ -20,7 +20,7 @@
 	<link name="cylinder_hand_left">
 		<visual>
 			<geometry>
-				<cylinder length=".0743" radius=".06" />
+				<cylinder length=".1638" radius=".06" />
 			</geometry>
 			<material name="ylw">
           			<color rgba=".8 .8 0 1"/>
@@ -31,7 +31,7 @@
 	<link name="cylinder_hand_right">
 		<visual>
 			<geometry>
-				<cylinder length=".0743" radius=".06" />
+				<cylinder length=".0625" radius=".06" />
 			</geometry>
 			<material name="ylw">
           			<color rgba=".8 .8 0 1"/>
@@ -113,7 +113,7 @@
 
 
         <joint name="hand_cylinder_joint_left" type="fixed">
-            <origin rpy="3.14159 0 3.14159" xyz="0 0 0"/>
+            <origin rpy="3.14159 0 3.14159" xyz="0 0 -0.03125"/>
                 <parent link="arm_left_link_tool0" />
                 <child link="cylinder_hand_left" />
         </joint>
@@ -130,7 +130,7 @@
         </xacro:s-model_articulated>
 <!--.077475-->
         <joint name="hand_left_joint" type="fixed">
-           <origin rpy="1.57079 0 -0.26180" xyz="0 0 0.0797125"/>
+           <origin rpy="1.57079 0 -0.26180" xyz="0 0 0.0819"/>
                 <parent link="cylinder_hand_left" />
                 <child link="hand_left_palm" />
             </joint>
