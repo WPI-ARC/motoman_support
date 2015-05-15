@@ -184,7 +184,7 @@
    <link name="traybackwall_hand_right">
       <visual>
          <geometry>
-            <box size ="0.175 0.065 0.015" />
+            <box size ="0.175 0.065 0.07" />
          </geometry>
          <material name="pwkl">
                    <color rgba=".8 .6 1 1"/>
@@ -205,19 +205,19 @@
     </joint>
 
    <joint name="tray_joint_side_wall_1" type="fixed">
-      <origin rpy="0 1.5707963 0" xyz="0.1 0 -0.17" />
+      <origin rpy="0 1.5707963 0" xyz="0.085 -0.023 -0.17" />
       <parent link="traybody_hand_right" />
       <child link="traysidewall1_hand_right" />
    </joint>
 
    <joint name="tray_joint_side_wall_2" type="fixed">
-      <origin rpy="0 1.5707963 0" xyz="-0.1 0 -0.17" />
+      <origin rpy="0 1.5707963 0" xyz="-0.085 -0.023 -0.17" />
       <parent link="traybody_hand_right" />
       <child link="traysidewall2_hand_right" />
    </joint>
 
    <joint name="tray_joint_back_wall" type="fixed">
-      <origin rpy="0 0 0" xyz="0 0 -0.25" />
+      <origin rpy="0 0 0" xyz="0 -0.03 -0.21" />
       <parent link="traybody_hand_right" />
       <child link="traybackwall_hand_right" />
    </joint>
