@@ -141,7 +141,7 @@
 			<child link="${prefix}link_4_u"/>
 			<origin xyz="0 -0.0085 -0.181" rpy="-1.57 0 0"/>
 			<axis xyz="0 0 ${reflect}" />
-			<limit lower="-2.36" upper="2.36" effort="0" velocity="2.95" />
+			<limit lower="-2.3" upper="2.3" effort="0" velocity="2.95" />
 		</joint>
 		<joint name="${prefix}joint_5_r" type="revolute">
 			<parent link="${prefix}link_4_u"/>

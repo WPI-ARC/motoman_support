@@ -66,7 +66,7 @@
 
 
 <!--
-    <group name="arm_left">       
+    <group name="arm_left">
         <joint name="arm_left_joint_1_s" />
         <joint name="arm_left_joint_2_l" />
         <joint name="arm_left_joint_3_e" />
@@ -195,18 +195,42 @@
     <disable_collisions link1="hand_left_finger_middle_link_2" link2="hand_left_finger_middle_link_3" reason="Adjacent" />
     <disable_collisions link1="hand_left_finger_middle_link_1" link2="hand_left_finger_middle_link_3" reason="Never" />
 
+    <disable_collisions link1="arm_right_link_7_t" link2="trayhandle_hand_right" reason="Adjacent" />
+    <disable_collisions link1="trayhandle_hand_right" link2="traybody_hand_right" reason="Adjacent" />
+    <disable_collisions link1="traysidewall1_hand_right" link2="traybody_hand_right" reason="Adjacent" />
+    <disable_collisions link1="traysidewall2_hand_right" link2="traybody_hand_right" reason="Adjacent" />
+    <disable_collisions link1="traybackwall_hand_right" link2="traybody_hand_right" reason="Adjacent" />
+    <disable_collisions link1="traybackwall_hand_right" link2="traysidewall1_hand_right" reason="Adjacent" />
+    <disable_collisions link1="traybackwall_hand_right" link2="traysidewall2_hand_right" reason="Adjacent" />
+    <disable_collisions link1="traybackwall_hand_right" link2="trayhandle_hand_right" reason="Adjacent" />
+
+
+
+
+    <disable_collisions link1="head_wire" link2="torso_link_b1" reason="Adjacent" />
+    <disable_collisions link1="head_wire" link2="torso_link_b2" reason="Adjacent" />
+    <disable_collisions link1="head_wire" link2="arm_right_link_1_s" reason="Adjacent" />
+    <disable_collisions link1="head_wire" link2="arm_left_link_1_s" reason="Adjacent" />
+
     <disable_collisions link1="cylinder_hand_left" link2="arm_left_link_tool0" reason="Never" />
     <disable_collisions link1="cylinder_hand_left" link2="hand_left_palm" reason="Never" />
     <disable_collisions link1="cylinder_hand_left" link2="arm_left_link_7_t" reason="Never" />
     <disable_collisions link1="cylinder_hand_left" link2="arm_left_link_6_b" reason="Never" />
 
+    <disable_collisions link1="cylinder_hand_right" link2="arm_right_link_tool0" reason="Never" />
+    <disable_collisions link1="cylinder_hand_right" link2="arm_right_link_6_b" reason="Never" />
+    <disable_collisions link1="cylinder_hand_right"  link2="arm_right_link_7_t" reason="Never" />
+    <disable_collisions link1="cylinder_hand_right" link2="trayhandle_hand_right" reason="Adjacent" />
+
+
     <disable_collisions link1="base_link" link2="torso_link_b1" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="torso_link_b2" reason="Adjacent" />
     <disable_collisions link1="torso_link_b1" link2="torso_link_b2" reason="Default" />
 
-    <disable_collisions link1="camera_left" link2="hand_left_palm" reason="Never" />
-    <disable_collisions link1="camera_left" link2="hand_left_finger_1_link_0" reason="Never" />
-    <disable_collisions link1="camera_left" link2="hand_left_finger_2_link_0" reason="Never" />
+    <disable_collisions link1="camera_left" link2="arm_left_link_tool0" reason="Never" />
+    <disable_collisions link1="camera_left" link2="arm_left_link_7_t" reason="Never" />
+    <disable_collisions link1="camera_left" link2="arm_left_link_6_b" reason="Never" />
+    <disable_collisions link1="camera_left" link2="cylinder_hand_left" reason="Never" />
 
     <disable_collisions link1="robotiq_hand_wires_left" link2="cylinder_hand_left" reason="Never" />
     <disable_collisions link1="robotiq_hand_wires_left" link2="hand_left_palm" reason="Never" />
@@ -214,5 +238,8 @@
     <disable_collisions link1="robotiq_force_wires_left" link2="hand_left_palm" reason="Never" />
     <disable_collisions link1="robotiq_hand_wires_left" link2="hand_left_finger_middle_link_0" reason="Never"/>
 
+    <disable_collisions link1="hand_left_finger_1_link_3" link2="hand_left_finger_1_link_3_tip" reason="Adjacent" />
+    <disable_collisions link1="hand_left_finger_2_link_3" link2="hand_left_finger_2_link_3_tip" reason="Adjacent" />
+    <disable_collisions link1="hand_left_finger_middle_link_3" link2="hand_left_finger_middle_link_3_tip" reason="Adjacent" />
 
 </robot>
