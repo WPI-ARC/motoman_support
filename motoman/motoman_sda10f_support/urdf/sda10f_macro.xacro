@@ -93,7 +93,22 @@
                 <child link="robotiq_force_wires_left" />
     </joint>
 
+  <link name="torso_cylinder">
+    <visual>
+      <geometry>
+        <cylinder length="1" radius="0.15" />
+      </geometry>
+            <material name="pwkl">
+              <color rgba=".8 .8 1 1"/>
+          </material>
+    </visual>`
+  </link>
 
+  <joint name="torso_cylinder_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0.1 0 0.5"/>
+          <parent link="base_link" />
+          <child link="torso_cylinder" />
+  </joint>
 
 
 <!--
