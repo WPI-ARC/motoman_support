@@ -129,9 +129,6 @@
     <disable_collisions link1="arm_left_link_2_l" link2="arm_right_link_2_l" reason="Never" />
     <disable_collisions link1="arm_left_link_2_l" link2="arm_right_link_3_e" reason="Never" />
     <disable_collisions link1="arm_left_link_2_l" link2="arm_right_link_4_u" reason="Never" />
-    <disable_collisions link1="arm_left_link_2_l" link2="base_link" reason="Never" />
-    <disable_collisions link1="arm_left_link_2_l" link2="torso_link_b1" reason="Never" />
-    <disable_collisions link1="arm_left_link_2_l" link2="torso_link_b2" reason="Never" />
     <disable_collisions link1="arm_left_link_3_e" link2="arm_left_link_4_u" reason="Adjacent" />
     <disable_collisions link1="arm_left_link_3_e" link2="arm_left_link_5_r" reason="Never" />
     <disable_collisions link1="arm_left_link_3_e" link2="arm_left_link_6_b" reason="Never" />
@@ -158,9 +155,6 @@
     <disable_collisions link1="arm_right_link_2_l" link2="arm_right_link_3_e" reason="Adjacent" />
     <disable_collisions link1="arm_right_link_2_l" link2="arm_right_link_4_u" reason="Never" />
     <disable_collisions link1="arm_right_link_2_l" link2="arm_right_link_5_r" reason="Never" />
-    <disable_collisions link1="arm_right_link_2_l" link2="base_link" reason="Never" />
-    <disable_collisions link1="arm_right_link_2_l" link2="torso_link_b1" reason="Never" />
-    <disable_collisions link1="arm_right_link_2_l" link2="torso_link_b2" reason="Never" />
     <disable_collisions link1="arm_right_link_3_e" link2="arm_right_link_4_u" reason="Adjacent" />
     <disable_collisions link1="arm_right_link_3_e" link2="arm_right_link_5_r" reason="Never" />
     <disable_collisions link1="arm_right_link_3_e" link2="arm_right_link_6_b" reason="Never" />
@@ -171,7 +165,6 @@
     <disable_collisions link1="arm_right_link_5_r" link2="arm_right_link_6_b" reason="Adjacent" />
     <disable_collisions link1="arm_right_link_5_r" link2="arm_right_link_7_t" reason="Never" />
     <disable_collisions link1="arm_right_link_6_b" link2="arm_right_link_7_t" reason="Adjacent" />
-    <disable_collisions link1="arm_right_link_7_t" link2="torso_link_b1" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="torso_link_b2" reason="Adjacent" />
     <disable_collisions link1="torso_link_b1" link2="torso_link_b2" reason="Default" />
 
