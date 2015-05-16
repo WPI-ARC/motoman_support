@@ -64,51 +64,6 @@
         <group name="torso" />
     </group>
 
-
-<!--
-    <group name="arm_left">
-        <joint name="arm_left_joint_1_s" />
-        <joint name="arm_left_joint_2_l" />
-        <joint name="arm_left_joint_3_e" />
-        <joint name="arm_left_joint_4_u" />
-        <joint name="arm_left_joint_5_r" />
-        <joint name="arm_left_joint_6_b" />
-        <joint name="arm_left_joint_7_t" />
-        <joint name="arm_left_joint_tool0" />
-        <joint name="hand_cylinder_joint_left" />
-        <joint name="hand_left_joint" />
-    </group>
-    <group name="arm_right">
-        <joint name="arm_right_joint_1_s" />
-        <joint name="arm_right_joint_2_l" />
-        <joint name="arm_right_joint_3_e" />
-        <joint name="arm_right_joint_4_u" />
-        <joint name="arm_right_joint_5_r" />
-        <joint name="arm_right_joint_6_b" />
-        <joint name="arm_right_joint_7_t" />
-        <joint name="arm_right_joint_tool0" />
-        <joint name="hand_cylinder_joint_right" />
-        <joint name="hand_right_joint" />
-    </group>
-    <group name="torso">
-        <joint name="torso_joint_b1" />
-        <joint name="torso_joint_b2" />
-    </group>
-    <group name="arms">
-        <group name="arm_left" />
-        <group name="arm_right" />
-    </group>
-    <group name="sda10f">
-        <group name="arms" />
-        <group name="torso" />
-    </group>
-    -->
-
-<!--
-<end_effector name="arm_left_eef" parent_link="hand_left_joint" group="arm_left" parent_group="arms"/>
-<end_effector name="arm_right_eef" parent_link="hand_right_joint" group="arm_right" parent_group="arms"/>
--->
-
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="base_link" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
@@ -129,6 +84,8 @@
     <disable_collisions link1="arm_left_link_2_l" link2="arm_right_link_2_l" reason="Never" />
     <disable_collisions link1="arm_left_link_2_l" link2="arm_right_link_3_e" reason="Never" />
     <disable_collisions link1="arm_left_link_2_l" link2="arm_right_link_4_u" reason="Never" />
+    <disable_collisions link1="arm_left_link_2_l" link2="torso_link_b1" reason="Never" />
+    <disable_collisions link1="arm_left_link_2_l" link2="torso_link_b2" reason="Never" />
     <disable_collisions link1="arm_left_link_3_e" link2="arm_left_link_4_u" reason="Adjacent" />
     <disable_collisions link1="arm_left_link_3_e" link2="arm_left_link_5_r" reason="Never" />
     <disable_collisions link1="arm_left_link_3_e" link2="arm_left_link_6_b" reason="Never" />
@@ -155,6 +112,8 @@
     <disable_collisions link1="arm_right_link_2_l" link2="arm_right_link_3_e" reason="Adjacent" />
     <disable_collisions link1="arm_right_link_2_l" link2="arm_right_link_4_u" reason="Never" />
     <disable_collisions link1="arm_right_link_2_l" link2="arm_right_link_5_r" reason="Never" />
+    <disable_collisions link1="arm_right_link_2_l" link2="torso_link_b1" reason="Never" />
+    <disable_collisions link1="arm_right_link_2_l" link2="torso_link_b2" reason="Never" />
     <disable_collisions link1="arm_right_link_3_e" link2="arm_right_link_4_u" reason="Adjacent" />
     <disable_collisions link1="arm_right_link_3_e" link2="arm_right_link_5_r" reason="Never" />
     <disable_collisions link1="arm_right_link_3_e" link2="arm_right_link_6_b" reason="Never" />
