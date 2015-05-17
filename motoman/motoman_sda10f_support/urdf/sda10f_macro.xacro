@@ -157,7 +157,7 @@
 	<link name="traybody_hand_right">
 		<visual>
 			<geometry>
-				<box size="0.19 .005 .50" />
+				<box size="0.20 .05 .50" />
 			</geometry>
 			<material name="pwkl">
           			<color rgba=".8 .6 1 1"/>
@@ -168,7 +168,7 @@
 	<link name="trayhandle_hand_right">
 		<visual>
 			<geometry>
-				<box size="0.155 .165 .015" />
+				<box size="0.16 .17 .03" />
 			</geometry>
 			<material name="pwkl">
           			<color rgba=".8 .6 1 1"/>
