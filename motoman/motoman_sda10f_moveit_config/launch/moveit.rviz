@@ -10,13 +10,10 @@ Panels:
         - /MotionPlanning1/Planned Path1
         - /TF1
         - /TF1/Frames1
-        - /TF1/Frames1/arm_left_link_tool01
-        - /TF1/Frames1/camera_left1
-        - /TF1/Frames1/cylinder_hand_left1
         - /Marker2
         - /Pose1
       Splitter Ratio: 0.743383
-    Tree Height: 471
+    Tree Height: 437
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -255,6 +252,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          torso_cylinder:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           torso_link_b1:
             Alpha: 1
             Show Axes: false
@@ -264,7 +266,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: true
           traybackwall_hand_right:
             Alpha: 1
             Show Axes: false
@@ -526,6 +527,11 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          torso_cylinder:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           torso_link_b1:
             Alpha: 1
             Show Axes: false
@@ -535,7 +541,6 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: true
           traybackwall_hand_right:
             Alpha: 1
             Show Axes: false
@@ -571,83 +576,85 @@ Visualization Manager:
       Frames:
         All Enabled: false
         arm_left_link_1_s:
-          Value: false
+          Value: true
         arm_left_link_2_l:
-          Value: false
+          Value: true
         arm_left_link_3_e:
-          Value: false
+          Value: true
         arm_left_link_4_u:
-          Value: false
+          Value: true
         arm_left_link_5_r:
-          Value: false
+          Value: true
         arm_left_link_6_b:
-          Value: false
+          Value: true
         arm_left_link_7_t:
-          Value: false
+          Value: true
         arm_left_link_tool0:
           Value: true
         arm_right_link_1_s:
-          Value: false
+          Value: true
         arm_right_link_2_l:
-          Value: false
+          Value: true
         arm_right_link_3_e:
-          Value: false
+          Value: true
         arm_right_link_4_u:
-          Value: false
+          Value: true
         arm_right_link_5_r:
-          Value: false
+          Value: true
         arm_right_link_6_b:
-          Value: false
+          Value: true
         arm_right_link_7_t:
-          Value: false
+          Value: true
         arm_right_link_tool0:
-          Value: false
+          Value: true
         base_link:
-          Value: false
+          Value: true
         camera_left:
           Value: true
         camera_left_depth_optical_frame:
-          Value: false
+          Value: true
         cylinder_hand_left:
           Value: true
         cylinder_hand_right:
-          Value: false
+          Value: true
         hand_left_finger_1_link_3:
-          Value: false
+          Value: true
         hand_left_finger_1_link_3_tip:
-          Value: false
+          Value: true
         hand_left_finger_2_link_3:
-          Value: false
+          Value: true
         hand_left_finger_2_link_3_tip:
-          Value: false
+          Value: true
         hand_left_finger_middle_link_3:
-          Value: false
+          Value: true
         hand_left_finger_middle_link_3_tip:
-          Value: false
+          Value: true
         hand_left_palm:
-          Value: false
+          Value: true
         head_wire:
-          Value: false
+          Value: true
         robotiq_force_wires_left:
-          Value: false
+          Value: true
         robotiq_hand_wires_left:
-          Value: false
+          Value: true
         shelf:
-          Value: false
+          Value: true
+        torso_cylinder:
+          Value: true
         torso_link_b1:
-          Value: false
+          Value: true
         torso_link_b2:
-          Value: false
+          Value: true
         traybackwall_hand_right:
-          Value: false
+          Value: true
         traybody_hand_right:
-          Value: false
+          Value: true
         trayhandle_hand_right:
-          Value: false
+          Value: true
         traysidewall1_hand_right:
-          Value: false
+          Value: true
         traysidewall2_hand_right:
-          Value: false
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: false
@@ -656,6 +663,8 @@ Visualization Manager:
       Tree:
         base_link:
           shelf:
+            {}
+          torso_cylinder:
             {}
           torso_link_b1:
             arm_left_link_1_s:
@@ -869,7 +878,7 @@ Visualization Manager:
 Window Geometry:
   Displays:
     collapsed: true
-  Height: 1148
+  Height: 1028
   Help:
     collapsed: false
   Hide Left Dock: true
@@ -878,9 +887,9 @@ Window Geometry:
     collapsed: false
   Motion Planning:
     collapsed: true
-  QMainWindow State: 000000ff00000000fd00000001000000000000034600000436fc0200000006fb000000100044006900730070006c006100790073000000002800000218000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a00560069006500770073000000017f00000109000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670000000246000002180000017400fffffffb0000000a0049006d00610067006500000003740000008e0000001600ffffff0000039f0000043600000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000001000000000000034600000436fc0200000006fb000000100044006900730070006c006100790073000000002800000218000000dd00fffffffb0000000800480065006c00700000000342000000bb0000007600fffffffb0000000a00560069006500770073000000017f00000109000000b000fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e0067000000024600000218000001ab00fffffffb0000000a0049006d00610067006500000003740000008e0000001600ffffff0000039f000003be00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 927
-  X: 59
-  Y: 24
+  X: 982
+  Y: 14

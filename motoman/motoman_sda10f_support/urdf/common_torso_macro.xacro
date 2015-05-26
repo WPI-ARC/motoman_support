@@ -39,7 +39,7 @@
 			</collision>
 		</link>
 		<link name="${prefix}link_b2">
-			<visual>
+<!-- 			<visual>
 				<origin rpy="0 0 0" xyz="0 0 0"/>
 				<geometry>
 					<mesh filename="package://motoman_sda10f_support/meshes/sda10f/visual/motoman_axis_b1.stl"/>
@@ -54,7 +54,7 @@
 					<mesh filename="package://motoman_sda10f_support/meshes/sda10f/collision/motoman_axis_b1.stl" />
 				</geometry>
 				<material name="yellow"/>
-			</collision>
+			</collision> -->
 		</link>
 		<!-- joint list -->
 		<joint name="${prefix}joint_b1" type="revolute">
